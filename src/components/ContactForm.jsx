@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCamera} from '@fortawesome/free-solid-svg-icons';
+import defaultProfile from '../image/userProfile1.png';
 
 /* 상태 관리 store */
 import usePhoneBookStore from '../stores/usePhoneBookStore';
@@ -69,7 +70,7 @@ const ContactForm = () => {
       <Box display="flex" flexDirection="column" alignItems="center" gap={3} >
         <label className="profileWrap" htmlFor="profile" style={{'cursor' : 'pointer'}} title="프로필사진 선택">
           <FontAwesomeIcon className="cameraIcon" icon={faCamera} />
-          <img src={profileUrl ? profileUrl : 'image/userProfile1.png'} width={95} alt="프로필사진"/>
+          <img src={profileUrl ? profileUrl : defaultProfile } width={95} alt="프로필사진"/>
           <input type="file" id="profile" accept="image/*" onChange={(e)=>uploadProfile(e.target)} />
         </label>
           

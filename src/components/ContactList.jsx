@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import usePhoneBookStore from '../stores/usePhoneBookStore';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import Grid from '@mui/material/Grid';
+import callmg from '../image/call.png';
+import defaultProfile from '../image/userProfile1.png';
 
 const ContactList = () => {
     const { phoneBook, serachBy, searchBook } = usePhoneBookStore();
@@ -36,9 +37,9 @@ const ContactList = () => {
                 {(searchBook? searchBook : phoneBook).map((item) => {
                     return (
                         <Box padding={{ xs: 1, md: 3}} className="inputWrap contactListWrap" key={item.id} display="flex" flexDirection="row">
-                            <img className="profileImg" src={item.profile ? item.profile : 'image/userProfile1.png' }/>
+                            <img className="profileImg" src={item.profile ? item.profile : defaultProfile }/>
                             <p>{item.name} <br/>{item.phoneNum}</p>
-                            <img src='image/call.png' className="callImg" onClick={()=>goCall(item.phoneNum)}/>
+                            <img src={callmg} className="callImg" onClick={()=>goCall(item.phoneNum)}/>
                          </Box>);  
                 })}
             </Box>
