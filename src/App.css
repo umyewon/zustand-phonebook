@@ -1,0 +1,108 @@
+/* App.jsx (s) */
+.appWrap {
+    border: 3px solid #696969;
+    border-radius: 35px;
+    box-shadow: 2.5px 3px 0 0 #f89efb, 5px 6px 0 0 #696969;
+    padding: 25px 18px 45px;
+}
+
+.appTitle {
+    text-align: center;
+    font-family: "Godo", sans-serif;
+    font-style: normal;
+    margin-top : 5%;
+    color : #590074;
+    font-weight: 700;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+/* App.jsx (e) */
+
+/* ContactForm.jsx (s) */
+.profileWrap {
+  width: 85px;
+  height : 100px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.cameraIcon {
+    position : absolute;
+    z-index: 3;
+    width: 35px;
+    height: 40px;
+    margin-top: 70%;
+    margin-left: 60%;
+}
+
+
+/* ContactForm.jsx (e) */
+
+/* ContactList.jsx (s) */
+.contactListWrap {
+    border: 1px dashed #696969;
+    border-radius: 90px;
+    background: #ffffff2b;
+    color: #590672;
+     align-items: center;
+}
+
+.contactListWrap p { 
+    width: 120%;
+    margin-left: 5%;
+}
+
+.callImg { 
+    cursor: pointer;
+}
+
+/* 웹 */
+@media (max-width: 2600px) { 
+    .contactListWrap {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    .profileImg {
+        width: 100px;
+        height: 90px;
+        margin-left: 7%;
+    }
+
+    .callImg {
+        width: 50px;
+        margin-right: 4%;
+    }
+
+    .inputWrap {
+        min-width: 90%;
+    }
+
+} 
+
+/* 모바일 */
+@media only screen and (max-width: 475px) {
+    .contactListWrap {
+        font-size: 0.9rem;
+    }
+
+    .profileImg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .callImg {
+        width: 25px;
+        height: 30px;
+        margin-right: 7%;
+    }
+
+    .inputWrap {
+        width: 95%;
+    }
+}
+
+/* ContactList.jsx (e) */
